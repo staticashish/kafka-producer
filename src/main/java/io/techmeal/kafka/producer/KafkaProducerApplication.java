@@ -8,7 +8,7 @@ import java.util.Properties;
  * Kafka producer application !!
  *
  */
-public class App {
+public class KafkaProducerApplication {
 	private static final String KAFKA_PRODUCER_TOPIC = "producer.topic";
 	private static final String KAFKA_SERVER = "kafka.server";
 	private static final String IS_ASYNC = "isAsync";
@@ -27,7 +27,7 @@ public class App {
     }
 
 	private static void setup() throws IOException {
-		InputStream is = App.class.getClassLoader().getResourceAsStream("kafka.properties");
+		InputStream is = KafkaProducerApplication.class.getClassLoader().getResourceAsStream("kafka.properties");
     	Properties props = new Properties();
     	props.load(is);
     	kafkaServer = (String) props.get(KAFKA_SERVER);
