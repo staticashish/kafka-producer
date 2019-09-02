@@ -58,10 +58,11 @@ public class Producer {
 	}
 
 	private void printMetadata(RecordMetadata recordMetadata) {
+		
 		System.out.println("Recieved Metadata: \n" +
-				"Topic : "+recordMetadata.topic() +" \n" +
-				"Partition : "+recordMetadata.partition() +" \n" +
-				"Offset : "+recordMetadata.offset() +" \n" +
-				"Timestamp : "+recordMetadata.timestamp());
+							"Topic : "+recordMetadata.topic() +" \n" +
+							"Partition : "+recordMetadata.partition() +" \n" +
+							"Offset : "+recordMetadata.offset() +" \n" +
+							"Timestamp : "+recordMetadata.timestamp());
 	}
 }
